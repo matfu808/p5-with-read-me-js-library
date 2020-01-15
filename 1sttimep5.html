@@ -13,10 +13,13 @@
       function setup() {
         //this creates a canvas that is x and y
   createCanvas(w, h,WEBGL);
-  bImage = loadImage('hiker.jpeg');
+
 
 }
 
+function preload(){
+    bImage = loadImage('hiker.jpeg');
+}
 function draw() {
   clear();
   background(bImage);
