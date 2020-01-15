@@ -1,0 +1,58 @@
+<html>
+  <head>
+<script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+<style>
+  margin: 0;
+  padding: 0;
+</style>
+  </head>
+  <body>
+    <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+      function setup() {
+        //this creates a canvas that is x and y
+  createCanvas(w, h,WEBGL);
+  bImage = loadImage('hiker.jpeg');
+
+}
+
+function draw() {
+  clear();
+  background(bImage);
+  fill("red");
+  //I will rotate around the Y axis when I move my mouse horizontally. I will divide by 100 to decrease mouse sensitivity.
+  rotateY(mouseX/100);
+  //I will rotate around the X axis when I move my mouse horizontally, I will divide by 100 to decrease mouse sensitivity.
+  rotate(mouseY/100);
+rect(30, 20, 55, 55);
+
+fill("black");
+  rotateY(mouseX/50);
+  rotate(mouseY/50);
+rect(50, 20, 55, 55);
+
+fill("blue");
+  rotateY(mouseX/25);
+  rotate(mouseY/25);
+rect(90, 80, 55, 55);
+
+fill("green");
+  rotateY(mouseX/75);
+  rotate(mouseY/75);
+rect(30, 70, 55, 55);
+
+fill("orange");
+  rotateY(mouseX/10);
+  rotate(mouseY/10);
+triangle(30, 75, 58, 20, 86, 75);
+
+fill("purple");
+  rotateY(mouseX/200);
+  rotate(mouseY/200);
+triangle(40, 10, 58, 20, 86, 75);
+  noStroke();
+}
+    </script>
+  </body>
+</html>
